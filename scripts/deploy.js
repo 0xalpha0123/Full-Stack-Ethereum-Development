@@ -24,8 +24,8 @@ async function main() {
   const Greeter = await hre.ethers.getContractFactory("Greeter");
   const greeter = await Greeter.deploy("Hello, Hardhat!");
 
-  const Token = await hre.ethers.getContractFactory("Token");
-  const token = await Token.deploy();
+  const NDToken = await hre.ethers.getContractFactory("NDToken");
+  const ndToken = await NDToken.deploy("Nader Dabit Token", "NDT");
 
   await greeter.deployed();
   await token.deployed();
